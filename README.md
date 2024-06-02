@@ -72,3 +72,46 @@ Training Time
 Step 4: Running Code and Full Report
 
 This completes the runnable code and readme for evaluating deep generative models on the CIFAR-10 and COVID-19 Radiography datasets. The models include DCGAN, VAE, and WGAN-GP. The evaluation metrics are FID, PSNR, SSIM, and training time. The results are summarized and visualized in the end.
+
+
+Discussion and Answers to Questions
+
+1. Reveal the Problems of Existing Deep Generative Models and Dig into the Causes
+
+Mode Collapse in GANs: GANs, including DCGAN and WGAN-GP, can suffer from mode collapse where the generator produces limited variety of outputs. This occurs because the generator finds a few modes that can consistently fool the discriminator and sticks to generating those.
+
+Blurred Outputs in VAEs: VAEs tend to produce blurred images. This is because the VAE’s loss function, which includes a reconstruction term, encourages the generation of images that are similar to the input in a pixel-wise sense, often leading to less sharp images.
+
+Training Instability: GANs can be unstable to train. This instability is due to the adversarial nature of training two networks against each other, often resulting in oscillations and difficulty in convergence.
+
+2. Algorithmic Improvements to Learning or Reasoning of Existing Deep Generative Models
+
+Improving GANs:
+
+WGAN and WGAN-GP: Implementing the Wasserstein loss with gradient penalty helps improve training stability and reduces mode collapse.
+
+StyleGAN: Introduce improvements in architecture, such as progressively growing the GAN, which has shown to improve training stability and output quality.
+
+Improving VAEs:
+
+Beta-VAE: Adjusting the weight of the KL-divergence term can help control the trade-off between reconstruction fidelity and latent space disentanglement.
+
+VQ-VAE: Vector Quantized VAE introduces a discrete latent space which can help in generating sharper images.
+
+3. New Theoretical Analysis of Existing Deep Generative Models
+
+Theoretical Insights into GANs:
+
+Optimal Transport Theory: WGAN’s foundation is based on optimal transport theory, which provides a robust way to measure the distance between probability distributions.
+
+Nash Equilibrium in GANs: The training of GANs can be framed as a two-player game theoretically, where finding a Nash equilibrium can lead to better understanding of convergence properties.
+
+Information Theory in VAEs:
+
+Information Bottleneck Principle: VAEs can be analyzed using the information bottleneck principle, which helps in understanding how much information from the input is preserved in the latent space.
+
+Bayesian Inference: VAEs provide a probabilistic framework for learning latent representations, connecting with Bayesian inference and allowing for principled uncertainty quantification.
+
+Conclusion
+
+The evaluation of DCGAN, VAE, and WGAN-GP on CIFAR-10 and COVID-19 Radiography datasets revealed strengths and weaknesses of each model. WGAN-GP generally outperformed the others in terms of FID, PSNR, and SSIM, while VAE lagged behind due to its inherent limitations. The analysis and visualization of results help in understanding the performance and guiding further improvements in generative model research.
