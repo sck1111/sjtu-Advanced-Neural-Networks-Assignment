@@ -5,6 +5,8 @@ The borrowed code base includes:
 
 https://github.com/eriklindernoren/PyTorch-GAN
 
+https://github.com/tkarras/progressive_growing_of_gans
+
 https://github.com/AntixK/PyTorch-VAE
 
 https://github.com/NVlabs/stylegan2
