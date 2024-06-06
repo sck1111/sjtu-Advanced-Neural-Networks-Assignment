@@ -13,17 +13,15 @@ https://github.com/NVlabs/stylegan2
 
 Description
 
-This project evaluates several deep generative models on the CIFAR-10 dataset and a new dataset from Kaggle called "COVID-19 Image Data Collection". The models include DCGAN, VAE, and WGAN-GP. The evaluation focuses on the effectiveness, efficiency, and reliability of the models using metrics like FID, PSNR, SSIM, and training time.
+This project evaluates several deep generative models on the traditional and novel dataset and a new dataset. The models include DCGAN, VAE, and WGAN-GP. The evaluation focuses on the effectiveness, efficiency, and reliability of the models using metrics like FID, PSNR, SSIM, and training time.
 
 Step 1: Dataset Acquisition
 
-We first use the Kaggle website to find a suitable dataset. For this example, let's choose a recent dataset from the healthcare domain, such as "Breast Cancer Wisconsin (Diagnostic) Data Set".
+We first use the Kaggle website to find a suitable dataset. For this example, let's choose a recent dataset from the healthcare domain, such as "Breast Cancer Wisconsin (Diagnostic) Data Set" and "COVID-19 Image Data Collection".
 
 Other Datasets:
 
-CIFAR-10: CIFAR-10 Dataset
-
-COVID-19 Radiography: COVID-19 Image Data Collection
+CIFAR-10 Dataset, MNIST Dataset, CelebA Dataset, FFHQ(Flickr-Faces-HQ), LSUN 
 
 You can download the dataset from the following URL:
 
@@ -61,6 +59,8 @@ Reliability: Consistency of the model's performance.(Consistency across multiple
 
 Evaluation Metrics
 
+Inception Score（IS）
+
 Frechet Inception Distance (FID)
 
 Peak Signal-to-Noise Ratio (PSNR)
@@ -71,7 +71,7 @@ Training Time
 
 Step 4: Running Code and Full Report
 
-This completes the runnable code and readme for evaluating deep generative models on the CIFAR-10 and COVID-19 Radiography datasets. The models include DCGAN, VAE, and WGAN-GP. The evaluation metrics are FID, PSNR, SSIM, and training time. The results are summarized and visualized in the end.
+This completes the runnable code and readme for evaluating deep generative models on the CIFAR-10 and COVID-19 Radiography datasets. The models include DCGAN, VAE, and WGAN-GP. The evaluation metrics are IS, FID, PSNR, SSIM, and training time. The results are summarized and visualized in the end.
 
 
 Discussion and Answers to Questions
@@ -114,4 +114,4 @@ Bayesian Inference: VAEs provide a probabilistic framework for learning latent r
 
 Conclusion
 
-The evaluation of DCGAN, VAE, and WGAN-GP on CIFAR-10 and COVID-19 Radiography datasets revealed strengths and weaknesses of each model. WGAN-GP generally outperformed the others in terms of FID, PSNR, and SSIM, while VAE lagged behind due to its inherent limitations. The analysis and visualization of results help in understanding the performance and guiding further improvements in generative model research.
+The evaluation of DCGAN, VAE, and WGAN-GP revealed strengths and weaknesses of each model. StyleGAN2 and Diffusion Models generally outperformed the others in terms of IS, FID, PSNR, and SSIM, while VAE lagged behind due to its inherent limitations. The analysis and visualization of results help in understanding the performance and guiding further improvements in generative model research.
