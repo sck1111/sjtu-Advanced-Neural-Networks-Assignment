@@ -1,5 +1,5 @@
 # sjtu-Advanced-Neural-Networks-Assignment
-Deep Generative Models Evaluation on CIFAR-10 and COVID-19 Radiography Dataset. Systematic evaluation of the generation effectiveness, efficiency, and reliability of multiple deep generation models
+Generative models have revolutionized the field of computer vision, enabling the creation of highly realistic images. This report presents an evaluation of various generative models including DCGAN, VAE, WGAN-GP, StyleGAN2, and Diffusion models. These models are applied to several benchmark datasets: CelebA, MNIST, CIFAR-10, FFHQ, and LSUN. The evaluation metrics used to assess the performance include Frechet Inception Distance (FID), Inception Score (IS), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index Measure (SSIM).
 
 The borrowed code base includes:
 
@@ -114,4 +114,4 @@ Bayesian Inference: VAEs provide a probabilistic framework for learning latent r
 
 Conclusion
 
-The evaluation of DCGAN, VAE, and WGAN-GP revealed strengths and weaknesses of each model. StyleGAN2 and Diffusion Models generally outperformed the others in terms of IS, FID, PSNR, and SSIM, while VAE lagged behind due to its inherent limitations. The analysis and visualization of results help in understanding the performance and guiding further improvements in generative model research.
+This comprehensive evaluation of various generative models across multiple datasets highlights the strengths and weaknesses of each model. StyleGAN2 and Diffusion Models generally outperformed the others in terms of IS, FID, PSNR, and SSIM, while VAE lagged behind due to its inherent limitations. The analysis and visualization of results help in understanding the performance and guiding further improvements in generative model research. Future research should focus on addressing the challenges of mode collapse, improving evaluation metrics, and enhancing the scalability and efficiency of generative models.
