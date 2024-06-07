@@ -9,8 +9,6 @@ https://github.com/tkarras/progressive_growing_of_gans
 
 https://github.com/AntixK/PyTorch-VAE
 
-https://github.com/NVlabs/stylegan2
-
 Description
 
 This project evaluates several deep generative models on the traditional and novel dataset and a new dataset. The models include DCGAN, VAE, and WGAN-GP. The evaluation focuses on the effectiveness, efficiency, and reliability of the models using metrics like FID, PSNR, SSIM, and training time.
