@@ -11,6 +11,7 @@ class Discriminator(tf.keras.Model):
         self.conv2 = layers.Conv2D(128, (5, 5), strides=(2, 2), padding='same')
         self.flatten = layers.Flatten()
         self.dense = layers.Dense(1)
+        self.resolution = resolution
 
     def call(self, inputs):
         images, labels = inputs

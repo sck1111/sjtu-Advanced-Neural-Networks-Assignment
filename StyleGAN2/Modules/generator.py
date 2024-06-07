@@ -5,6 +5,7 @@ class Generator(tf.keras.Model):
     def __init__(self, resolution, num_labels):
         super(Generator, self).__init__()
         self.num_labels = num_labels
+        # self.dense1 = layers.Dense(7*7*256, use_bias=False,)
         self.dense1 = layers.Dense(7*7*256, use_bias=False, input_shape=(100+self.num_labels,))
         self.batch_norm1 = layers.BatchNormalization()
         self.leaky_relu = layers.LeakyReLU()
@@ -17,6 +18,7 @@ class Generator(tf.keras.Model):
 
     def call(self, inputs):
         noise, labels = inputs
+        labels = tf.cast(labels, tf.float32)  # Convert labels to float32
         x = tf.concat([noise, labels], axis=1)
         x = self.dense1(x)
         x = self.batch_norm1(x)
